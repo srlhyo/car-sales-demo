@@ -1,0 +1,184 @@
+/* Helpers */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    height: 540px;
+}
+
+
+/* Hreader */
+
+header {
+    padding: 10px;
+    display: flex;
+    margin-bottom: 50px;
+    border: 3px solid #f3ca99;
+}
+
+.logo {
+    flex: 1;
+    padding-left: 10%;
+}
+
+nav {
+    flex: 1;
+    align-self: center;
+}
+
+nav ul {
+    display: flex;
+    text-transform: uppercase;
+    justify-content: space-evenly;
+    padding-right: 7%;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+ul li a:hover {
+    border-bottom: 3px solid orange;
+}
+
+/* Main */
+.about-info {
+    display: flex;
+    height: calc(50vh - 10px);
+    background-color: orange;
+    align-items: center;
+}
+
+main {
+    text-align: center;
+    flex: 2;
+    padding: 50px;
+}
+
+aside {
+    flex: 1;
+    padding: 50px;
+    background-color: #f3ca99;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+#card {
+    text-align: center;
+}
+
+#card .card-profile {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#card .card-profile .card-title {
+    order: 2;
+}
+
+#card .card-profile img {
+    order: 1;
+    border-radius: 50%;
+
+}
+
+/* Car Section */
+
+#car-cards {
+    display: flex;
+    height: 400px;
+}
+
+#car-cards .car-card-title {
+    text-align: center;
+    background-color: #f3ca99;
+    border-radius: 1%;
+    padding: 20px 50px 0 50px;
+}
+
+#car-cards .car-card-title:nth-child(1) {
+    margin-right: 30px;
+}
+
+#car-cards .car-card-title:nth-child(2) {
+    margin-right: 30px;
+}
+
+#car-cards .car-card-title p {
+    margin-top: 30px;
+    line-height: 1.4;
+}
+
+.cars-title {
+    padding: 20px;
+}
+
+/* Chat Section */
+
+.btn-chat {
+    padding: 15px 30px;
+    outline: none;
+    background-color: rgb(255, 195, 82);
+    color: black;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    transition: all 0.1s ease-in-out;
+    margin-bottom: 50px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.btn-chat:hover {
+    background-color: orange;
+}
+
+.chat-container {
+    border: 3px solid orange;
+    padding: 50px;
+}
+
+.chat-container p span {
+    font-weight: 600;
+}
+
+.chat-container .chat-cards .agent-card {
+    margin-bottom: 50px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #f3ca99;
+    padding: 1.5% 10% ;
+    display: flex;
+    justify-content: space-between;
+}
