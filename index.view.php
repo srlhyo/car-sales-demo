@@ -27,10 +27,10 @@
         <aside>
             <div id="card">
                 <div class="card-profile">
-                    <h2 class="card-title">Hi, I'm Nelson!</h2>
-                    <img src="https://via.placeholder.com/70" alt="profile pic">
+                    <h2 class="card-title">Hi, <?= $buffo->name ?>!</h2>
+                    <img src="<?= $data->agentProfileImage($buffo) ?>" alt="profile pic" width="70px" height="70px">
                 </div>
-                <p>I am sales agent with 20 years of experience ginving the customers the best quality cars at the best price in the maket</p>
+                <p>I am a <?= $buffo->jobTitle ?> with <?= $buffo->yearsOfExperience() ?> years of experience giving the customers the best quality cars at the best price in the maket</p>
                 <p>Please come by and say hello.</p>
             </div>
         </aside>
@@ -39,19 +39,19 @@
         <h2 class="cars-title">There are our cars!</h2>
         <div id="car-cards">
             <div class="car-card-title">
-                <h3>Ferarri</h3>
-                <img src="https://via.placeholder.com/150" alt="ferrari">
-                <p class="car-description">This is cars is priced as 4000. It is 40 years old and only 5 people have it in the world</p>
+                <h3><?= $ferrari->make ?></h3>
+                <img src="<?= $data->carImages($ferrari)?>" alt="ferrari" width="150px" height="150px">
+                <p class="car-description">This is cars is priced as <?= $ferrari->price ?>. It is <?= $ferrari->howOld() ?> years old and only <?= $ferrari->sales() ?> people have it in the world</p>
             </div>
             <div class="car-card-title">
-                <h3>Porsh</h3>
-                <img src="https://via.placeholder.com/150" alt="porsh">
-                <p class="car-description">This is cars is priced as 4000. It is 40 years old and only 5 people have it in the world</p>
+                <h3><?= $porsh->make ?></h3>
+                <img src="<?= $data->carImages($porsh)?>" alt="porsh" width="150px" height="150px">
+                <p class="car-description">This is cars is priced as <?= $porsh->price ?>. It is <?= $porsh->howOld() ?> years old and only <?= $porsh->sales() ?> people have it in the world</p>
             </div>
             <div class="car-card-title">
-                <h3>Fiat</h3>
-                <img src="https://via.placeholder.com/150" alt="Fiat">
-                <p class="car-description">This is cars is priced as 4000. It is 40 years old and only 5 people have it in the world</p>
+                <h3><?= $fiat->make ?></h3>
+                <img src="<?= $data->carImages($fiat)?>" alt="Fiat" width="150px" height="150px">
+                <p class="car-description">This is cars is priced as <?= $fiat->price ?>. It is <?= $fiat->howOld() ?> years old and only <?= $fiat->sales() ?> people have it in the world</p>
             </div>
         </div>
     </section>
@@ -59,16 +59,16 @@
         <button class="btn-chat">Call for Help</button>
         <div class="chat-container">
             <div class="chat-cards">
-                <div class="agent-card">
-                    <img src="https://via.placeholder.com/50" alt="agent pic">
+                <div class="buyer-card">
+                <img src="<?= $data->userProfileImage($jonas)?>" alt="buyer pic" width="50px" height="50px">
                     <div class="agent-chat">
-                        <p><span>Agent: </span> Hello, Buyer. Thanks for reaching me out. I will show you what cars are available for sale right away!</p>
+                        <p><span>Buyer: </span> Hello, <?= $buffo->name ?>. I was passing by and noticed that you are selling cars. I would like to buy the <?= $ferrari->color. " " . $ferrari->make ?>. Is it available?</p>
                     </div>
                 </div>
-                <div class="buyer-card">
-                <img src="https://via.placeholder.com/50" alt="buyer pic">
+                <div class="agent-card">
+                    <img src="<?= $data->agentProfileImage($buffo)?>" alt="agent pic" width="50px" height="50px">
                     <div class="agent-chat">
-                        <p><span>Buyer: </span> Hello, Agent. I was passing by and noticed that you are selling cars. I wonder if you've got them all!</p>
+                        <p><span>Agent: </span> Hello, <?= $jonas->name?>. Thanks for reaching me out. <?= $data->salesMessage($buffo)?></p>
                     </div>
                 </div>
             </div>
