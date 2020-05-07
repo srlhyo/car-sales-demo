@@ -1,23 +1,16 @@
 <?php
 
-class Car extends SiteData
+class Car
 {
+    public $id;
+    public $name;
+    public $image_url;
     public $year;
-    public $make;
     public $color;
     public $price;
     public $available = false;
     public $sales = 1;
 
-    public function __construct($year, $make, $color, $price)
-    {
-        $this->year = $year;
-        $this->make = $make;
-        $this->color = $color;
-        $this->price = $price;
-    }
-
-    // how many cars have been sold
    public function sales()
    {
        return $this->sales++;
@@ -26,6 +19,6 @@ class Car extends SiteData
    public function howOld()
    {
         $currentYear = date('Y');
-        return $currentYear = date('Y') - $this->year;
+        return $currentYear - $this->year;
    }
 }

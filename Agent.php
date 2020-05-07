@@ -1,15 +1,15 @@
 <?php
-class Agent extends User
+class Agent
 {
-    public $jobTitle;
-    public $yearJobStarted;
+    public $id;
+    public $name;
+    public $age;
+    public $job_title;
+    public $start_job;
+    public $image_url;
+    public $sucess_messages;
+    public $fail_messages;
     public $salesAuthorized = false;
-
-    public function __construct($jobTitle, $yearJobStarted)
-    {
-        $this->jobTitle = $jobTitle;
-        $this->yearJobStarted = $yearJobStarted;
-    }
 
     public function salesAuthorized($user, $car)
     {

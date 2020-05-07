@@ -27,10 +27,10 @@
         <aside>
             <div id="card">
                 <div class="card-profile">
-                    <h2 class="card-title">Hi, <?= $buffo->name ?>!</h2>
-                    <img src="<?= $data->agentProfileImage($buffo) ?>" alt="profile pic" width="70px" height="70px">
+                    <h2 class="card-title">Hi, <?= '#' ?>!</h2>
+                    <img src="<?= '#' ?>" alt="profile pic" width="70px" height="70px">
                 </div>
-                <p>I am a <?= $buffo->jobTitle ?> with <?= $buffo->yearsOfExperience() ?> years of experience giving the customers the best quality cars at the best price in the maket</p>
+                <p>I am a <?= '#' ?> with <?= '#' ?> years of experience giving the customers the best quality cars at the best price in the maket</p>
                 <p>Please come by and say hello.</p>
             </div>
         </aside>
@@ -38,21 +38,13 @@
     <section class="container">
         <h2 class="cars-title">There are our cars!</h2>
         <div id="car-cards">
-            <div class="car-card-title">
-                <h3><?= $ferrari->make ?></h3>
-                <img src="<?= $data->carImages($ferrari)?>" alt="ferrari" width="150px" height="150px">
-                <p class="car-description">This is cars is priced as <?= $ferrari->price ?>. It is <?= $ferrari->howOld() ?> years old and only <?= $ferrari->sales() ?> people have it in the world</p>
+            <?php foreach($cars as $car) : ?>
+                <div class="car-card-title">
+                <h3><?= $car->name ?></h3>
+                <img src="<?= $car->image_url ?>" alt="ferrari" width="150px" height="150px">
+                <p class="car-description">This is cars is priced as <?= $car->price ?>. It is <?= $car->howOld() ?> years old and only <?= $car->sales ?> people have it in the world</p>
             </div>
-            <div class="car-card-title">
-                <h3><?= $porsh->make ?></h3>
-                <img src="<?= $data->carImages($porsh)?>" alt="porsh" width="150px" height="150px">
-                <p class="car-description">This is cars is priced as <?= $porsh->price ?>. It is <?= $porsh->howOld() ?> years old and only <?= $porsh->sales() ?> people have it in the world</p>
-            </div>
-            <div class="car-card-title">
-                <h3><?= $fiat->make ?></h3>
-                <img src="<?= $data->carImages($fiat)?>" alt="Fiat" width="150px" height="150px">
-                <p class="car-description">This is cars is priced as <?= $fiat->price ?>. It is <?= $fiat->howOld() ?> years old and only <?= $fiat->sales() ?> people have it in the world</p>
-            </div>
+            <?php endforeach; ?>
         </div>
     </section>
     <section class="container">
@@ -60,15 +52,15 @@
         <div class="chat-container">
             <div class="chat-cards">
                 <div class="buyer-card">
-                <img src="<?= $data->userProfileImage($jonas)?>" alt="buyer pic" width="50px" height="50px">
+                <img src="<?= '#'?>" alt="buyer pic" width="50px" height="50px">
                     <div class="agent-chat">
-                        <p><span>Buyer: </span> Hello, <?= $buffo->name ?>. I was passing by and noticed that you are selling cars. I would like to buy the <?= $ferrari->color. " " . $ferrari->make ?>. Is it available?</p>
+                        <p><span>Buyer: </span> Hello, <?= '#' ?>. I was passing by and noticed that you are selling cars. I would like to buy the <?= '#' ?>. Is it available?</p>
                     </div>
                 </div>
                 <div class="agent-card">
-                    <img src="<?= $data->agentProfileImage($buffo)?>" alt="agent pic" width="50px" height="50px">
+                    <img src="<?= '#'?>" alt="agent pic" width="50px" height="50px">
                     <div class="agent-chat">
-                        <p><span>Agent: </span> Hello, <?= $jonas->name?>. Thanks for reaching me out. <?= $data->salesMessage($buffo)?></p>
+                        <p><span>Agent: </span> Hello, <?= '#'?>. Thanks for reaching me out. <?= '#'?></p>
                     </div>
                 </div>
             </div>

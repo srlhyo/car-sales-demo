@@ -1,17 +1,13 @@
 <?php
-class User extends SiteData
+class User
 {
+    public $id;
     public $name;
     public $age;
     public $budget;
+    public $image_url;
+    public $person_title;
     public $drivingLicense = false;
-
-    public function __construct($name, $age, $budget)
-    {
-        $this->name = $name;
-        $this->age = $age;
-        $this->budget = $budget;
-    }
 
     public function hasDrivingLicense()
     {
