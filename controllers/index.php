@@ -1,5 +1,5 @@
 <?php
 
-$cars = $query->selectAll('cars', 'Car');
+$cars = $app['database']->selectAll('cars', 'Car');
 
 require 'views/index.view.php';
