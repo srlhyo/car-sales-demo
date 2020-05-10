@@ -1,12 +1,11 @@
 <?php
 
-require 'functions.php';
-// require 'User.php';
-// require 'Agent.php';
-require 'Car.php';
+$query = require 'core/bootstrap.php';
 
+// require 'controllers/about-me.php';
+$router = new Router();
 
-$query = require 'bootstrap.php';
-$cars = $query->selectAll('cars', 'Car');
+require 'routes.php';
 
-require 'index.view.php';
+$uri = trim($_SERVER['REQUEST_URI'], '/');
+require $router->direct($uri);
