@@ -7,7 +7,11 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Agent' => $baseDir . '/core/Agent.php',
+    'App' => $baseDir . '/core/App.php',
     'Car' => $baseDir . '/core/Car.php',
+    'ComposerAutoloaderInit6303a695d6e6107dff06d2d98aab32ef' => $vendorDir . '/composer/autoload_real.php',
+    'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
+    'Composer\\Autoload\\ComposerStaticInit6303a695d6e6107dff06d2d98aab32ef' => $vendorDir . '/composer/autoload_static.php',
     'Connection' => $baseDir . '/core/database/Connection.php',
     'QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'Request' => $baseDir . '/core/Request.php',

@@ -8,7 +8,11 @@ class ComposerStaticInit6303a695d6e6107dff06d2d98aab32ef
 {
     public static $classMap = array (
         'Agent' => __DIR__ . '/../..' . '/core/Agent.php',
+        'App' => __DIR__ . '/../..' . '/core/App.php',
         'Car' => __DIR__ . '/../..' . '/core/Car.php',
+        'ComposerAutoloaderInit6303a695d6e6107dff06d2d98aab32ef' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\ComposerStaticInit6303a695d6e6107dff06d2d98aab32ef' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'Request' => __DIR__ . '/../..' . '/core/Request.php',
