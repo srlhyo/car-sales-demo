@@ -2,7 +2,10 @@
 
 class Router
 {
-    public $routes = [];
+    public $routes = [
+        'GET' => [],
+        'POST' => []
+    ];
 
     public function load($file)
     {
@@ -11,16 +14,22 @@ class Router
         return $router;
     }
 
-    public function define($routes)
+    public function get($uri, $controller)
     {
-        $this->routes = $routes;
+        $this->routes['GET'][$uri] = $controller;
     }
 
-    public function direct($uri){
+    public function post($uri, $controller)
+    {
+        $this->routes['POST'][$uri] = $controller;
+    }
 
-        if (array_key_exists($uri, $this->routes))
+    public function direct($uri, $method){
+
+        if (array_key_exists($uri, $this->routes[$method]))
         {
-            return $this->routes[$uri];
+
+            return $this->routes[$method][$uri];
         }
 
         throw new Exception('No routes define for this uri');
