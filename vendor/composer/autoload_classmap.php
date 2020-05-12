@@ -7,17 +7,16 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Agent' => $baseDir . '/core/Agent.php',
-    'App' => $baseDir . '/core/App.php',
+    'App\\Controllers\\DetailsController' => $baseDir . '/controllers/DetailsController.php',
+    'App\\Controllers\\PagesController' => $baseDir . '/controllers/PagesController.php',
+    'App\\Core\\App' => $baseDir . '/core/App.php',
+    'App\\Core\\Request' => $baseDir . '/core/Request.php',
+    'App\\Core\\Router' => $baseDir . '/core/Router.php',
     'Car' => $baseDir . '/core/Car.php',
     'ComposerAutoloaderInit6303a695d6e6107dff06d2d98aab32ef' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInit6303a695d6e6107dff06d2d98aab32ef' => $vendorDir . '/composer/autoload_static.php',
     'Connection' => $baseDir . '/core/database/Connection.php',
-    'DetailsController' => $baseDir . '/controllers/DetailsController.php',
-    'PagesController' => $baseDir . '/controllers/PagesController.php',
     'QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
-    'Request' => $baseDir . '/core/Request.php',
-    'Router' => $baseDir . '/core/Router.php',
-    'SiteData' => $baseDir . '/core/SiteData.php',
     'User' => $baseDir . '/core/User.php',
 );

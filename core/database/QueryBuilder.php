@@ -4,7 +4,7 @@ class QueryBuilder
 {
     public $pdo;
 
-    public function __construct(PDO $pdo)
+    public function __construct(\PDO $pdo)
     {
         $this->pdo = $pdo;
     }
@@ -19,7 +19,8 @@ class QueryBuilder
     public function insert($table, $parameters)
     {
         $sql = sprintf(
-            'INSERT INTO cars (%s) VALUES (%s)',
+            'INSERT INTO %s (%s) VALUES (%s)',
+            $table,
             implode(', ', array_keys($parameters)),
             ':'. implode(', :', array_keys($parameters)),
         );

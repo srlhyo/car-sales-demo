@@ -2,6 +2,10 @@
 
 require 'functions.php';
 
+
+use App\Core\App;
+
+
 // depency injection container
 App::bind('config', require 'config.php');
 
@@ -16,5 +20,5 @@ function view($name, $data = []) {
 
 // redirect to any pages
 function redirect($name) {
-    return require header("Location: {$name}");
+    require header("Location: {$name}");
 }

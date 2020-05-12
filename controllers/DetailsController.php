@@ -1,10 +1,13 @@
 <?php
 
+namespace App\Controllers;
+
+use App\Core\App;
 class DetailsController
 {
     public function agent()
     {
-        require 'views/details-agent.view.php';
+        return view('details-agent');
     }
 
     public function store()
@@ -16,6 +19,6 @@ class DetailsController
             'color' => $_POST['color'],
         ]);
 
-        return redirect('Location: /');
+        return redirect('/');
     }
 }

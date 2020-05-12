@@ -1,5 +1,7 @@
 <?php
+namespace App\Controllers;
 
+use App\Core\App;
 class PagesController
 {
     public function home(){
@@ -21,10 +23,5 @@ class PagesController
     public function contact(){
 
         return view('contact');
-    }
-
-    public function detailsagent(){
-
-        return view('details-agent');
     }
 }

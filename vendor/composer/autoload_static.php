@@ -8,18 +8,17 @@ class ComposerStaticInit6303a695d6e6107dff06d2d98aab32ef
 {
     public static $classMap = array (
         'Agent' => __DIR__ . '/../..' . '/core/Agent.php',
-        'App' => __DIR__ . '/../..' . '/core/App.php',
+        'App\\Controllers\\DetailsController' => __DIR__ . '/../..' . '/controllers/DetailsController.php',
+        'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/controllers/PagesController.php',
+        'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
+        'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
+        'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
         'Car' => __DIR__ . '/../..' . '/core/Car.php',
         'ComposerAutoloaderInit6303a695d6e6107dff06d2d98aab32ef' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit6303a695d6e6107dff06d2d98aab32ef' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
-        'DetailsController' => __DIR__ . '/../..' . '/controllers/DetailsController.php',
-        'PagesController' => __DIR__ . '/../..' . '/controllers/PagesController.php',
         'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
-        'Request' => __DIR__ . '/../..' . '/core/Request.php',
-        'Router' => __DIR__ . '/../..' . '/core/Router.php',
-        'SiteData' => __DIR__ . '/../..' . '/core/SiteData.php',
         'User' => __DIR__ . '/../..' . '/core/User.php',
     );
 
