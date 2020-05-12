@@ -1,9 +1,9 @@
 <?php
 
-$router->get('', 'controllers/index.php');
-$router->get('about', 'controllers/about.php');
-$router->get('contact', 'controllers/contact.php');
-$router->get('about/me', 'controllers/about-me.php');
-$router->get('details/agent', 'controllers/details-agent.php');
+$router->get('', 'PagesController@home');
+$router->get('about', 'PagesController@about');
+$router->get('contact', 'PagesController@contact');
+$router->get('about/me', 'PagesController@aboutme');
+$router->get('details/agent', 'DetailsController@agent');
 
-$router->post('agents', 'controllers/agents.php');
+$router->post('agents', 'DetailsController@store');
